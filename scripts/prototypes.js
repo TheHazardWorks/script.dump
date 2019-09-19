@@ -66,3 +66,12 @@ Array.prototype.exists = function(item = undefined) {
         return Boolean(~this.indexOf(item));
     }
 }
+// =================================================================================
+//  More prominent Base64 Encoding
+// =================================================================================
+window.Base64 = window.Base64 || {};
+// Encode and Decode
+window.Base64.encode = window.btoa;
+window.Base64.decode = window.atob;
+// Handling Unusual Functions
+window.Base64.toString = function() { return '[object Base64]' };
